@@ -1,0 +1,171 @@
+{
+  "static": {
+    "fp16": {
+      "label": "FP16",
+      "tier": 0,
+      "perplexity": 8.961864566809284,
+      "perplexity_std": 64.03536403672119,
+      "mem_used_gb": 0.768,
+      "mem_saved_%": 0.0,
+      "mem_peak_gpu_gb": 0.0682915839999998,
+      "energy_used": 64.0,
+      "energy_saved_%": 0.0,
+      "avg_latency_ms": 499.20534338996526,
+      "per_task_ppl": {
+        "chat": 35.71133079536337,
+        "math": 11.839765562928779,
+        "code": 5.796978438138657,
+        "reasoning": 65.71105865112125,
+        "factual": 66.46969471554664
+      },
+      "n_samples": 200
+    },
+    "fp8": {
+      "label": "FP8",
+      "tier": 1,
+      "perplexity": 8.990891087027801,
+      "perplexity_std": 64.40050948823692,
+      "mem_used_gb": 0.384,
+      "mem_saved_%": 50.0,
+      "mem_peak_gpu_gb": 0.06627737599999994,
+      "energy_used": 38.4,
+      "energy_saved_%": 40.0,
+      "avg_latency_ms": 1990.9429511349945,
+      "per_task_ppl": {
+        "chat": 37.34987758538578,
+        "math": 11.809892703572917,
+        "code": 5.834892394090157,
+        "reasoning": 65.79502577021972,
+        "factual": 66.37926908602684
+      },
+      "n_samples": 200
+    },
+    "fp4": {
+      "label": "FP4",
+      "tier": 2,
+      "perplexity": 9.120182598031942,
+      "perplexity_std": 64.21416196869947,
+      "mem_used_gb": 0.192,
+      "mem_saved_%": 75.00000000000001,
+      "mem_peak_gpu_gb": 0.06619443200000008,
+      "energy_used": 19.2,
+      "energy_saved_%": 70.0,
+      "avg_latency_ms": 1218.0911313100346,
+      "per_task_ppl": {
+        "chat": 34.25846242237406,
+        "math": 12.420866999744835,
+        "code": 5.790052879631391,
+        "reasoning": 67.51715930645219,
+        "factual": 69.77330457795283
+      },
+      "n_samples": 200
+    }
+  },
+  "agent": [
+    {
+      "battery_%": 100,
+      "perplexity": 9.05842555999756,
+      "perplexity_std": 1.5144228033939532e-05,
+      "mem_used_gb": 0.32100000000000006,
+      "mem_saved_%": 58.203124999999986,
+      "energy_used": 30.699999999999992,
+      "energy_saved_%": 52.031250000000014,
+      "avg_latency_ms": 10.295217640000374,
+      "tier_%_fp16": 10.9375,
+      "tier_%_fp8": 34.375,
+      "tier_%_fp4": 54.6875,
+      "per_task_ppl": {
+        "chat": 9.058423471450805,
+        "math": 9.058436846733093,
+        "code": 9.058415007591247,
+        "reasoning": 9.058419609069825,
+        "factual": 9.058432865142823
+      },
+      "n_samples": 200
+    },
+    {
+      "battery_%": 75,
+      "perplexity": 9.062462697029114,
+      "perplexity_std": 1.0493961732527989e-05,
+      "mem_used_gb": 0.315,
+      "mem_saved_%": 58.984375,
+      "energy_used": 30.100000000000005,
+      "energy_saved_%": 52.968749999999986,
+      "avg_latency_ms": 9.31602673000043,
+      "tier_%_fp16": 10.9375,
+      "tier_%_fp8": 31.25,
+      "tier_%_fp4": 57.8125,
+      "per_task_ppl": {
+        "chat": 9.062457752227782,
+        "math": 9.06246838569641,
+        "code": 9.062464952468872,
+        "reasoning": 9.06246075630188,
+        "factual": 9.062461638450623
+      },
+      "n_samples": 200
+    },
+    {
+      "battery_%": 50,
+      "perplexity": 9.070998520851136,
+      "perplexity_std": 1.1964184485198586e-05,
+      "mem_used_gb": 0.29700000000000004,
+      "mem_saved_%": 61.328125,
+      "energy_used": 28.5,
+      "energy_saved_%": 55.46875,
+      "avg_latency_ms": 9.06869395000058,
+      "tier_%_fp16": 9.375,
+      "tier_%_fp8": 26.5625,
+      "tier_%_fp4": 64.0625,
+      "per_task_ppl": {
+        "chat": 9.070994687080383,
+        "math": 9.071000719070435,
+        "code": 9.07100477218628,
+        "reasoning": 9.071000742912293,
+        "factual": 9.070991683006287
+      },
+      "n_samples": 200
+    },
+    {
+      "battery_%": 25,
+      "perplexity": 9.071906137466431,
+      "perplexity_std": 1.1102731111827768e-05,
+      "mem_used_gb": 0.2850000000000001,
+      "mem_saved_%": 62.890624999999986,
+      "energy_used": 27.699999999999992,
+      "energy_saved_%": 56.718750000000014,
+      "avg_latency_ms": 9.068381129998215,
+      "tier_%_fp16": 6.25,
+      "tier_%_fp8": 29.6875,
+      "tier_%_fp4": 64.0625,
+      "per_task_ppl": {
+        "chat": 9.071902346611022,
+        "math": 9.07190716266632,
+        "code": 9.07191035747528,
+        "reasoning": 9.07190980911255,
+        "factual": 9.07190101146698
+      },
+      "n_samples": 200
+    },
+    {
+      "battery_%": 10,
+      "perplexity": 9.068322501182557,
+      "perplexity_std": 1.0874094446219227e-05,
+      "mem_used_gb": 0.2850000000000001,
+      "mem_saved_%": 62.890624999999986,
+      "energy_used": 27.899999999999995,
+      "energy_saved_%": 56.406250000000014,
+      "avg_latency_ms": 8.973684830000366,
+      "tier_%_fp16": 4.6875,
+      "tier_%_fp8": 34.375,
+      "tier_%_fp4": 60.9375,
+      "per_task_ppl": {
+        "chat": 9.068321442604065,
+        "math": 9.068317627906799,
+        "code": 9.068321323394775,
+        "reasoning": 9.068328142166138,
+        "factual": 9.068323969841003
+      },
+      "n_samples": 200
+    }
+  ]
+}
