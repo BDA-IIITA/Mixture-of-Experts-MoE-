@@ -31,62 +31,6 @@ Compared to DynaExq (traffic heuristics) and static quantization, this approach 
 
 Agent becomes more aggressive as battery drops — saves more memory with acceptable quality loss.
 
----
-
-## Project Structure
-
-```
-adaptive-moe-quant/
-│
-├── configs/
-│   └── config.yaml              # all hyperparameters in one place
-│
-├── src/
-│   ├── collector/
-│   │   ├── load_model.py        # load OLMoE with hooks
-│   │   ├── hook_manager.py      # register/remove routing hooks
-│   │   ├── dataset_builder.py   # load HF datasets, collect prompts
-│   │   └── collect_logits.py    # main collection loop
-│   │
-│   ├── predictor/
-│   │   ├── dataset.py           # PyTorch dataset for predictor training
-│   │   ├── model.py             # routing predictor MLP
-│   │   └── train.py             # training loop + evaluation
-│   │
-│   ├── environment/
-│   │   ├── hardware_sim.py      # battery/RAM/thermal simulator
-│   │   ├── constants.py         # tier definitions, memory/energy costs
-│   │   └── moe_env.py           # Gym environment
-│   │
-│   ├── agent/
-│   │   └── train_agent.py       # PPO training + callbacks
-│   │
-│   └── evaluation/
-│       ├── evaluate_agent.py    # per-battery evaluation
-│       ├── baselines.py         # fp16/fp8/fp4 perplexity measurement
-│       └── visualize.py         # all plots
-│
-├── scripts/
-│   ├── run_collection.py        # end-to-end data collection
-│   ├── run_predictor.py         # train predictor
-│   ├── run_agent.py             # train RL agent
-│   └── run_evaluation.py        # full evaluation pipeline
-│
-├── notebooks/
-│   └── full_pipeline.ipynb      # Kaggle-ready notebook (all steps)
-│
-├── data/                        # gitignored — populated after collection
-│   └── .gitkeep
-│
-├── models/                      # gitignored — populated after training
-│   └── .gitkeep
-│
-├── requirements.txt
-└── README.md
-```
-
----
-
 ## Quickstart
 
 ### 1. Install
