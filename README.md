@@ -52,7 +52,7 @@ A full simulation environment that models a multi-turn "conversation session" on
 |---|---|
 | **Expert Importance** | Derived from OLMoE routing logits via temperature-scaled softmax (`τ = 1.0`) |
 | **Hardware Simulator** | Simulates battery drain (uniform 1–100% start), fluctuating RAM (2–8 GB), and thermal state. Battery depletes each step as a function of the agent's energy consumption. |
-| **Quantization Tiers** | 3 tiers with distinct memory cost (0.012 / 0.006 / 0.003 GB per expert), energy cost (1.0 / 0.6 / 0.3 relative units), and quality penalty (0.0 / 0.18 / 1.0, derived from actual OLMoE perplexity deltas) |
+| **Quantization Tiers** | 3 tiers with distinct memory cost (0.012 / 0.006 / 0.003 GB per expert), energy cost (1.0 / 0.6 / 0.3 relative units), and quality penalty (0.0 / 0.18 / 1.0, derived from **empirically measured** OLMoE perplexity at each precision: FP16 = 8.962, FP8 = 8.991, FP4 = 9.120) |
 | **Reward Function** | Weighted sum of memory savings, energy savings (weight increases as battery drops), dynamic quality penalty (quality protection fades as battery drops, shaped by a `quality_curve_k` parameter), survival bonus, and terminal death penalty |
 | **Termination** | Episode ends when battery < 2% or free RAM < 0.3 GB (terminal failure) or after `max_turns = 40` steps |
 
