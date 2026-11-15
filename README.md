@@ -210,3 +210,7 @@ action, _ = agent.predict(obs, deterministic=True)
 ## License
 
 This project is released for academic research and educational purposes.
+
+## Standalone demo scaffold
+
+See [`demo/README.md`](demo/README.md) for the Gradio scaffold, record viewer/exports, checkpoint-compatible PPO adapter, and one-expert CUDA storage gate. Full-model live inference is still pending. The benchmark notebook's mixed-tier path dequantizes values into FP16 tensors; its tier-based memory formula is an estimate rather than evidence of packed GPU storage. The demo requires measured packed-storage validation before reporting memory savings.
